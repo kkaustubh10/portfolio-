@@ -1,634 +1,301 @@
- <!-----META SECTION----->
- <!DOCTYPE html>
- <html>
- <head>
- <title>Kaustubh's Portfolio</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<style>
-  /*****COMMON CSS SECTION*****/
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	-outline: 0;
-}
-html, body 
-	{
-	font-size: 14px;
-	font-weight: 400;
-	background: #6e6e6e;
-	color: #f7ff83;
-}
-.container {
-	width: 1100px;
-	margin: 0px auto;
-	display: table;
-}
-.width-33 {
-	width: 33%;
-	float: left;
-}
-.width-66 {
-	width: 66%;
-	float: left;
-}
-/*****MENU SECTION*****/
-.main-panel {
-	width: 100%;
-	float: left;
-	padding-top: 20px;
-	padding-bottom: 50px;
-	height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaustubh's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.logo {
-	font-size: 40px;
-	font-weight: 600;
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-.span-col {
-	color: #ffbf35;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-nav {
-	float: right;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #6e6e6e;
+      color: #f7ff83;
+    }
 
-nav a {
-	text-decoration: none;
-	font-size: 16px;
-	font-weight: 500;
-	margin-left: 20px;
-	color: white;
-}
-/*****Main BANNER*****/
-.width-50 {
-	float: left;
-	width: 50%;
-}
-.banner-section {
-	width: 100%;
-	float: left;
-	margin-top: 25vh;
-}
-.banner-section h1 {
-	font-size: 48px;
-	margin-top: 10px;
-	font-weight: bolder;
-}
-.banner-section h2 {
-	font-size: 20px;
-	line-height: 25px;
-	margin-top: 10px;
-	font-weight: 400;
-}
-.banner-section a {
-	float: left;
-	text-decoration: none;
-	font-size: 18px;
-	margin-top: 20px;
-	border-radius: 50%;
-	text-align: center;
-	border: 2px solid #f7a800;
-	color: #ffae00;
-	margin-left: 10px;
-	height: 50px;
-	width: 50px;
-	line-height: 50px;
-}
-/*****Main BANNER IMAGE*****/
-.main-panel img {
-	margin-top: 10%;
-	width: 100%;
-	margin-left: 10%;
-}
-/*ABOUT US SECTION*/
-.main-section {
-	width: 100%;
-	float: left;
-	padding: 110px 0px 110px 0px;
-}
-.width-100 {
-	width: 100%;
-	float: left;
-}
-.mt-20 {
-	margin-top: 20px;
-}
-.heading-text {
-	width: 100%;
-	float: left;
-	font-size: 35px;
-	text-align: center;
-	margin-bottom: 50px;
-	color: #f3a600;
-}
-.about-img {
-	width: 100%;
-	padding: 0px 50px;
-	margin-top: 20px;
-}
-.about-us {
-	width: 100%;
-	float: left;
-	padding: 20px;
-}
-.about-us p {
-	font-size: 16px;
-	margin-top: 15px;
-	line-height: 27px;
-}
-table {
-	width: 100%;
-}
-table th,
-table td {
-	font-size: 16px;
-	text-align: left;
-	padding: 5px 0px;
-}
-/*****SKILL SECTION*****/
-.skill {
-	margin-top: 40px;
-	font-size: 17px;
-}
+    .container {
+      width: 1100px;
+      max-width: 95%;
+      margin: auto;
+    }
 
-.skill span {
-	float: right;
-}
+    .width-50 { width: 50%; float: left; }
+    .width-100 { width: 100%; float: left; }
 
-.skill div {
-	width: 100%;
-	float: center;
-	margin-top: 5px;
-	background: #e7e7e7;
-	border-radius: 10px;
-}
+    .span-col { color: #ffbf35; }
 
-.skill div span {
-	background: #ffbf35;
-	height: 10px;
-	float: left;
-}
+    /* MENU */
+    nav {
+      float: right;
+    }
 
-div[role="progressbar"] {
-	color: #ffbf35;
-	margin-left: 100px;
-	margin-bottom: 20px;
-	width: 100px;
-	;
-	height: 100px;
-	;
-	border-radius: 50%;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
 
-	place-items: center;
-	display: grid;
+    nav a.active {
+      color: #ffbf35;
+      font-weight: bold;
+    }
 
-	--pgPercentage: var(--value);
-	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
-		conic-gradient(#ffbf35 calc(var(--pgPercentage) * 1%), #ffe6af 0);
+    /* BANNER */
+    .banner-section {
+      margin-top: 120px;
+    }
 
-}
-/*****EXPERIENCE SECTION*****/
-.bg-lightgrey {
-	background-color: #1a1a1a;
-}
-.edu-exp {
-	padding: 10px 0px;
-	width: 50%;
-	margin: 1%;
-	float: center;
-	padding-left: 10px;
-}
-.experience-list {
-	width: 100%;
-	float: left;
-	padding: 30px 10px;
-	background: #262626;
-	margin-bottom: 20px;
-}
-.experience-content {
-	width: 100%;
-	float: center;
-	margin-left: 10px;
-}
-.experience-content h2 {
+    .banner-section h1 {
+      font-size: 48px;
+    }
 
-	font-weight: 600;
-	margin-bottom: 5px;
-	font-size: 20px;
-}
-.experience-content h3 {
-	color: #ffbf35;
-	font-weight: 500;
-	margin-bottom: 2px;
-	font-size: 20px;
-}
-.experience-content p {
-	font-size: 20px;
-}
-/*SERVICE SECTION*/
-.service-list {
-	padding: 40px;
-	margin-top: 35px;
-	background: #262626;
-	border-radius: 15px;
-	width: 94%;
-	float: center;
-}
+    .banner-section a {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      border: 2px solid #ffbf35;
+      border-radius: 50%;
+      color: #ffbf35;
+      margin: 10px 5px 0;
+    }
 
-.service-list i {
-	font-size: 50px;
-	color: #ffbf35;
-	width: 50px;
-	float: left;
-}
+    /* SECTIONS */
+    .main-section {
+      padding: 80px 0;
+      clear: both;
+    }
 
-.service-list h3 {
-	font-size: 28px;
-	margin-top: 8px;
-	margin-bottom: 15px;
-}
+    .bg-lightgrey {
+      background: #1a1a1a;
+    }
 
-.service-list p {
-	font-size: 15px;
-	line-height: 25px;
-}
-/*PORTFOLIO SECTION*/
-.gallery {
-	width: 100%;
-	float: left;
-	margin-top: 30px;
-}
-.gallery img {
-	height: auto;
-	width: 95%;
-	margin-bottom: 20px;
-}
-/*CONTACT US SECTION*/
-.contact form {
-	width: 66%;
-	margin: 0px auto;
-}
-.contact input,
-textarea {
-	width: 100%;
-	float: left;
-	margin-bottom: 20px;
-	height: 40px;
-	padding: 10px;
-	border: 1px solid #a1a1a1;
-}
-.contact textarea {
-	height: 80px;
-}
-.contact button {
-	width: 100%;
-	float: left;
-	margin-bottom: 20px;
-	height: 40px;
-	padding: 10px;
-	background: #ffbf35;
-	color: #fff;
-	border: none;
-	font-size: 16px;
-}
-.contact h3 {
-	font-size: 26px;
-	text-align: center;
-	margin-top: 60px;
-	color: #ffbf35;
-}
-.contact h4 {
-	font-size: 22px;
-	text-align: center;
-	margin-top: 10px;
-}
-.contact p {
-	text-align: center;
-	font-size: 16px;
-	margin-top: 5px;
-}
-/*****FOOTER SECTION*****/
-.footer {
-	background-color: #202020;
-	padding: 30px 0px 40px 0px;
-	width: 100%;
-	float: left;
-}
-.footer-sect {
-	color: #b3b3b3;
-}
-.footer-sect a {
-	color: #b3b3b3;
-	margin-left: 10px;
-	text-decoration: none;
-	font-size: 18px;
-	text-align: center;
-}
-.social-icon a i {
-	width: 50px;
-	height: 50px;
-	border: 1px solid #cdcdcd;
-	line-height: 50px;
-	font-size: 20px;
-	border-radius: 50%;
-}
-.resumebtn {
-  margin-top: 6rem;
-  align-items: right;
-}
-.resumebtn .btn {
-  padding: 2rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.3s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  font-family: "Nunito", sans-serif;
+    .heading-text {
+      text-align: center;
+      font-size: 35px;
+      color: #ffbf35;
+      margin-bottom: 40px;
+    }
+
+    /* SKILLS */
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill div {
+      background: #ddd;
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill div span {
+      background: #ffbf35;
+      height: 10px;
+      display: block;
+    }
+
+    /* GALLERY */
+    .gallery img {
+      width: 30%;
+      margin: 1%;
+      border-radius: 10px;
+    }
+    .gallery-video {
+     width: 25%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  }
+
+    /* CONTACT */
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    .contact button {
+      background: #ffbf35;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #202020;
+      padding: 30px;
+      text-align: center;
+      color: #b3b3b3;
+    }
+
+    /* CLEAR FIX */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="container clearfix">
+  <h1>Port<span class="span-col">folio</span></h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<!-- HOME -->
+<section id="home" class="container banner-section clearfix">
+  <div class="width-50">
+    <h1>Kaustubh <span class="span-col">K</span></h1>
+    <h2>Graphic Designer & Video Editor</h2>
+
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+  <div class="width-50">
+    <img src="images/profile/profile.jpg" width="100%">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="main-section bg-lightgrey">
+  <div class="container">
+    <h2 class="heading-text">About Me</h2>
+    <p>I am available for Graphic Design & Video Editing projects.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Skills</h2>
+
+    <div class="skill">
+      Photoshop <span>90%</span>
+      <div><span style="width:90%"></span></div>
+    </div>
+
+    <div class="skill">
+      Illustrator <span>85%</span>
+      <div><span style="width:85%"></span></div>
+    </div>
   
-}
-.resumebtn .btn span {
-  font-weight: 600;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
-  align-items: right;
-}
-.resumebtn .btn i {
-  margin-right: 0.3rem;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-.resumebtn .btn:hover {
-  background: #1a047e;
-}
-.resumebtn .btn:hover i {
-  transform: translateX(5px);
-}
-</style>
- </head>
- <body>
-    <!-----MENU SECTION------>
-<div class="main-panel">
-    <div class="container">
-      <div class="width-33 logo">Port <span class="span-col">folio</span>
-      </div>
-      <div class="width-66">
-        <nav>
-          <a href="#Home">
-            <span class="span-col">Home</span>
-          </a>
-          <a href="#About me">About me</a>
-          <a href="#Education">Education</a>
-          <a href="#My Services">My Services</a>
-          <a href="#Gallery">Gallery</a>
-          <a href="#Testimonial">Testimonial</a>
-        </nav>
-      </div>
+  <div class="skill">
+    Corel draw <span>80%</span>
+      <div><span style="width:85%"></span></div>
     </div>
-    <!------MAIN BANNERR------>
-<div class="container ">
-    <div class="width-50">
-      <div class="banner-section">
-        <span class="span-col">Welcome To kaustubh .k</span>
-        <h1>Kaustubh <span class="span-col">K</span>
-        </h1>
-        <h2>- I'm a passionate graphic designer from Pune.</h2>
-        <a href="#facebook">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#twitter">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#linkedin">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="#instagram">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="#github">
-          <i class="fa fa-github"></i>
-        </a>
-      </div>
+ <div class="skill">
+    Indesign <span>75%</span>
+      <div><span style="width:85%"></span></div>
     </div>
-    <div class="width-50">
-      <img src="images\profile\profile.jpg">
+  <div class="skill">
+      Premeier pro <span>70%</span>
+      <div><span style="width:85%"></span></div>
+    </div>
+ 
+    <div class="skill">
+     After Effects  <span>65%</span>
+      <div><span style="width:85%"></span></div>
     </div>
   </div>
-  </div>
-  <!------ABOUT US SECTION------>
-<div class="main-section bg-lightgrey">
-    <div class="container">
-      <div class="width-50">
-        <img src="images\profile\profile 2.png" class="about-img">
-      </div>
-      <div class="width-50">
-        <div class="about-us">
-          <h2 class="heading-text">About Me</h2>
-          <h3>I am available for Graphic design & video editor Project</h3>
-           <div class="width-50 mt-20">
-            <table cellspacing="8" cellpadding="8">
-              <tr>
-                <th>Name:</th>
-                <td>Kaustubh</td>
-              </tr>
-              <tr>
-                <th>Email:</th>
-                <td> kstb1020@gmail.com</td>
-              </tr>
-              <tr>
-                <th>Birthday:</th>
-                <td> 10 february, 2002</td>
-              </tr>
-              <tr>
-                <th>Study:</th>
-                <td> Awaiting BSC results </td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="width-50 mt-20">
-            <table cellspacing="8" cellpadding="8">
-              <tr>
-                <th>Phone:</th>
-                <td>7559267287</td>
-              </tr>
-              <tr>
-                <th>City:</th>
-                <td>Pune</td>
-              </tr>
-              <tr>
-                <th>Freelancer:</th>
-                <td> Available</td>
-              </tr>
-              <tr>
-             </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="resumebtn">
-      <a href="https://drive.google.com/file/d/1DzKqyKuWBiG9rTKXQIac0Ah8lfPoxKd-/view?usp=drive_link" target="_blank" class="btn"><span>Resume</span>
-          <i class="fas fa-chevron-center"></i>
-      </a>
+ </div>
   </div>
   </div>
-  <!------SKILL SECTION------>
-<div class="main-section">
-    <div class="container">
-      <h2 class="heading-text">My Skills</h2>
-      <div class="width-50">
-        <div class="skill">
-          <b>Adobe Photoshop</b>
-          <span>90%</span>
-          <div>
-            <span style="width:90%"></span>
-          </div>
-        </div>
-        <div class="skill">
-          <b>Adobe Illustrator</b>
-          <span>85%</span>
-          <div>
-            <span style="width:85%"></span>
-          </div>
-        </div>
-        <div class="skill">
-          <b>Adobe After Effects</b>
-          <span>80%</span>
-          <div>
-            <span style="width:80%"></span>
-          </div>
-        </div>
-        <div class="skill">
-          <b>Adobe Premeier pro</b>
-          <span>75%</span>
-          <div>
-            <span style="width:75%"></span>
-          </div>
-        </div>
-        <div class="skill">
-          <b>Adobe Indesign</b>
-          <span>70%</span>
-          <div>
-            <span style="width:70%"></span>
-          </div>
-        </div>
-        <div class="skill">
-          <b>Corel Draw</b>
-          <span>65%</span>
-          <div>
-            <span style="width:65%"></span>
-          </div>
-        </div>
-      </div>
-      
-     </div>
-    </div>
-  </div>
-  <!------EXPERIENCE SECTION------>
-<div class="main-section bg-lightgrey">
-    <div class="container">
-      <div class="edu-exp">
-        <h2 class="heading-text">Education</h2>
-        <div class="experience-list">
-          <div class="experience-content">
-            <h2>Times Trends Academy </h2>
-            <h3>2021-2024</h3>
-            <p>pursuing</p>
-          </div>
-        </div>
-        <div class="experience-list">
-          <div class="experience-content">
-            <h2>Symbiosis Vocational colleage </h2>
-            <h3>2019-2021</h3>
-            <p>Passed</p>
-          </div>
-        </div>
-        
-    
-        </div>
-      </div>
-    </div>
-  </div>
-  <!------SERVICE SECTION------>
-<div class="main-section">
-    <div class="container">
-      <h2 class="heading-text">My Service</h2>
-      <div class="width-100">
-        <div class="service-list">
-        <h3>Working Softawre </h3>
-          </div>
-      </div>
-     <div class="width-100">
-        <div class="service-list">
-          <i class="fa fa-reddit"></i>
-          <h3>Creative Design</h3>
-           </div>
-      <div class="width-100">
-        <div class="service-list">
-          <i class="fa fa-video-camera"></i>
-          <h3>Video Editing</h3>
-        </div>
-      </div>
-     </div>
-    </div>
-  </div>
-  <!------PORTFOLIO SECTION------>
-<div class="main-section">
-    <div class="container">
-      <h2 class="heading-text">My Gallery</h2>
-      <div class="gallery">
-        <div class="width-35">
-          <img src="images\gallery\gallery-1.jpg">
-        </div>
-        <div class="width-35>
-          <img src="images\gallery\gallery-2.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-3.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-4.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-5.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-6.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-7.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-8.jpg">
-        </div>
-        <div class="width-35">
-          <img src="images\gallery\gallery-9.jpg">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-------------CONTACT US SECTION----------------------->
-<div class="main-section contact bg-lightgrey">
-    <div class="container">
-      <h2 class="heading-text">Contact</h2>
-      <div class="width-100">
-        <form>
-          <input type="text" placeholder="Full Name...">
-          <input type="text" placeholder=" Email Id...">
-          <input type="text" placeholder=" Mobile No...">
-          <textarea placeholder="Enter Address..."></textarea>
-          <button type="submit">Submit< /button>
-        </form>
-      </div>
-      
-  <!------FOOTER SECTION------>
+</section>
 
-      <div class="footer-sect social-icon width-50">
-       
-      <div class="footer-sect mt-50 width-50">CopyRight © 2024 All Rights Reserved</div>
-    </div>
+<!-- GALLERY -->
+<section id="gallery" class="main-section bg-lightgrey">
+  <div class="container">
+    <h2 class="heading-text">Gallery</h2>
+    <div class="gallery">
+
+  <!-- Images -->
+  <div class="width-15">
+    <img src="images/gallery/gallery-1.jpg">
   </div>
+
+  <div class="width-20">
+    <img src="images/gallery/gallery-2.jpg">
+  </div>
+
+  <div class="width-25">
+    <img src="images/gallery/gallery-3.jpg">
+  </div>
+
+   <div class="width-30">
+    <img src="images/gallery/gallery-4.jpg">
+  </div>
+     <div class="width-35">
+    <img src="images/gallery/gallery-5.jpg">
+  </div>
+     <div class="width-40">
+    <img src="images/gallery/gallery-6.jpg">
+  </div>
+     <div class="width-5">
+    <img src="images/gallery/gallery-5.jpg">
+  </div>
+  <!-- Videos -->
+  <div class="width-15">
+    <video class="gallery-video" controls>
+      <source src="images/video/Final.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="width-15">
+    <video class="gallery-video" controls>
+      <source src="images/video/gym.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="main-section contact">
+  <div class="container">
+    <h2 class="heading-text">Contact Me</h2>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="phone" placeholder="Mobile No">
+      <textarea id="message" placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2024 Kaustubh. All Rights Reserved
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
